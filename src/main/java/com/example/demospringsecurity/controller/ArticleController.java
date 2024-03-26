@@ -1,27 +1,31 @@
 package com.example.demospringsecurity.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
 
-@RestController
+@Controller
 public class ArticleController {
     @GetMapping("/article")
     public String getArticle() {
-        return "View Article";
+        return "article";
     }
 
     @GetMapping("/create-article")
     public String createArticle() {
-        return "Create Article";
+        System.out.println("Created article success");
+        return "article";
     }
 
-    @GetMapping("/update-article")
-    public String updateArticle() {
-        return "Update Article";
+    @GetMapping("/update-article/{id}")
+    public String updateArticle(@PathVariable Integer id) {
+        System.out.println("Updating article ID: " + id);
+        return "article";
     }
 
-    @GetMapping("/delete-article")
-    public String deleteArticle() {
-        return "Delete Article";
+    @GetMapping("/delete-article/{id}")
+    public String deleteArticle(@PathVariable Integer id) {
+        System.out.println("Deleting article ID: " + id);
+        return "article";
     }
 }

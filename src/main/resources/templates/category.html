@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Category page</title>
+</head>
+<body>
+<h1>Category Page</h1>
+
+<ul>
+    <li><a href="/">Home Page</a></li>
+    <li sec:authorize="hasRole('USER')"><a href="/category">Category Page</a></li>
+</ul>
+</body>
+</html>
