@@ -20,7 +20,7 @@ public class WebController {
 
     //    @RolesAllowed("ADMIN")
     @IsAdmin
-    @PreAuthorize("hasRole('ROLE_ADMIN')")
+//    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping("/admin")
     public String getAdmin() {
         return "admin";

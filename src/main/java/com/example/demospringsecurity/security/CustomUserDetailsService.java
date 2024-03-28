@@ -21,6 +21,8 @@ public class CustomUserDetailsService implements UserDetailsService {
         userList = new ArrayList<>();
         userList.add(new User(1, "hien", passwordEncoder.encode("123"), List.of("USER", "ADMIN")));
         userList.add(new User(2, "duy", passwordEncoder.encode("123"), List.of("USER")));
+        userList.add(new User(3, "tung", passwordEncoder.encode("123"), List.of("AUTHOR")));
+        userList.add(new User(4, "hoang", passwordEncoder.encode("123"), List.of("SALE")));
     }
 
     @Override
